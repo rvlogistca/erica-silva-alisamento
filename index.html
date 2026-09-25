@@ -1,46 +1,244 @@
-<section class="resultados" id="resultados">
-    <h2 class="titulo-secao">RESULTADOS <span>QUE FALAM</span></h2>
-    <div class="resultados-grid">
-        
-        <div class="resultado-card">
-            <div class="antes-depois">
-                <div class="img-box">
-                    <span>ANTES</span>
-                    <img src="antes1.jpg" alt="Antes">
-                </div>
-                <div class="img-box">
-                    <span>DEPOIS</span>
-                    <img src="depois1.jpg" alt="Depois">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Érika Silva — Beleza & Progressiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ☰ Botão Menu Lateral -->
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- 📋 Menu Lateral -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Érika Silva</h3>
+            <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#sobre"><i class="fas fa-user"></i> Sobre a Profissional</a>
+            <a href="#servicos"><i class="fas fa-spa"></i> Serviços</a>
+            <a href="#resultados"><i class="fas fa-images"></i> Resultados</a>
+            <a href="https://wa.me/5549996601984" target="_blank"><i class="fab fa-whatsapp"></i> Agendar Horário</a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 Érika Silva</p>
+        </div>
+    </aside>
+
+    <!-- 🔝 Cabeçalho / Hero -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="nome-principal">Érika Silva</h1>
+                <p class="subtitulo">BELEZA & PROGRESSIVA</p>
+                <p class="descricao">
+                    Realce sua beleza com seus cabelos,<br>
+                    mais lisos, saudáveis e cheios de brilho.<br>
+                    Atendimento personalizado para realçar<br>
+                    a sua melhor versão!
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> AGENDAR PELO WHATSAPP
+                    </a>
+                    
+                    <a href="https://instagram.com/erika_silveer" target="_blank" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> @erika_silveer
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <div class="resultado-card">
-            <div class="antes-depois">
-                <div class="img-box">
-                    <span>ANTES</span>
-                    <img src="antes2.jpg" alt="Antes">
-                </div>
-                <div class="img-box">
-                    <span>DEPOIS</span>
-                    <img src="depois2.jpg" alt="Depois">
-                </div>
+            <div class="hero-image">
+                <img src="img/hero-modelo.jpg" alt="Érika Silva — Beleza & Progressiva">
             </div>
         </div>
+        <div class="wave-divider"></div>
+    </header>
 
-        <div class="resultado-card">
-            <div class="antes-depois">
-                <div class="img-box">
-                    <span>ANTES</span>
-                    <img src="antes3.jpg" alt="Antes">
+    <!-- 👩 Sobre a Profissional -->
+    <section class="sobre" id="sobre">
+        <h2 class="titulo-secao">Sobre <span>Érika Silva</span></h2>
+        <div class="sobre-content">
+            <p>Sou Érika Silva, profissional especializada em progressiva e alisamento capilar. Com anos de experiência, trago técnicas avançadas e produtos de alta qualidade para transformar seus cabelos. Meu trabalho é feito com dedicação, cuidado e atenção aos detalhes, garantindo resultados que realçam sua beleza natural. Venha conhecer meu espaço e se sentir ainda mais linda!</p>
+        </div>
+    </section>
+
+    <!-- ✨ Nossos Serviços -->
+    <section class="servicos" id="servicos">
+        <h2 class="titulo-secao">Nossos <span>SERVIÇOS</span></h2>
+        <div class="servicos-grid">
+            
+            <div class="servico-card">
+                <div class="icone">
+                    <i class="fas fa-cut"></i>
                 </div>
-                <div class="img-box">
-                    <span>DEPOIS</span>
-                    <img src="depois3.jpg" alt="Depois">
+                <h3>PROGRESSIVA</h3>
+                <p>Cabelos mais lisos, alinhados e sem frizz.</p>
+            </div>
+
+            <div class="servico-card">
+                <div class="icone">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>HIDRATAÇÃO</h3>
+                <p>Hidratação profunda para fios saudáveis e macios.</p>
+            </div>
+
+            <div class="servico-card">
+                <div class="icone">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3>ESCOVA</h3>
+                <p>Mais brilho, leveza e movimento para seus cabelos.</p>
+            </div>
+
+            <div class="servico-card">
+                <div class="icone">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>TRATAMENTOS</h3>
+                <p>Reconstrução e nutrição para fios fortes e bonitos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 📸 Resultados Antes e Depois -->
+    <section class="resultados" id="resultados">
+        <h2 class="titulo-secao">RESULTADOS <span>QUE FALAM</span></h2>
+        <div class="resultados-grid">
+            
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box">
+                        <span>ANTES</span>
+                        <img src="img/antes1.jpg" alt="Antes">
+                    </div>
+                    <div class="img-box">
+                        <span>DEPOIS</span>
+                        <img src="img/depois1.jpg" alt="Depois">
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-    <p class="frase-final">Sua melhor versão começa aqui! ❤</p>
-</section>
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box">
+                        <span>ANTES</span>
+                        <img src="img/antes2.jpg" alt="Antes">
+                    </div>
+                    <div class="img-box">
+                        <span>DEPOIS</span>
+                        <img src="img/depois2.jpg" alt="Depois">
+                    </div>
+                </div>
+            </div>
+
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box">
+                        <span>ANTES</span>
+                        <img src="img/antes3.jpg" alt="Antes">
+                    </div>
+                    <div class="img-box">
+                        <span>DEPOIS</span>
+                        <img src="img/depois3.jpg" alt="Depois">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="frase-final">Sua melhor versão começa aqui! ❤</p>
+    </section>
+
+    <!-- 💎 Diferenciais -->
+    <section class="diferenciais">
+        <div class="diferencial-item">
+            <i class="fas fa-gem"></i>
+            <span>Produtos de alta qualidade</span>
+            <p>Para seus cabelos com excelência</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-star"></i>
+            <span>Atendimento personalizado</span>
+            <p>Cada detalhe feito com carinho</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Resultados comprovados</span>
+            <p>Clientes satisfeitas e realizadas</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-heart"></i>
+            <span>Cuidado & carinho</span>
+            <p>Tratamentos com amor</p>
+        </div>
+    </section>
+
+    <!-- 📞 Contato -->
+    <section class="contato">
+        <div class="contato-grid">
+            <a href="https://wa.me/5549996601984" target="_blank" class="contato-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WHATSAPP</span>
+                <p>(49) 99660-1984</p>
+            </a>
+            <a href="https://instagram.com/erika_silveer" target="_blank" class="contato-item">
+                <i class="fab fa-instagram"></i>
+                <span>INSTAGRAM</span>
+                <p>@erika_silveer</p>
+            </a>
+            <div class="contato-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>ATENDIMENTO</span>
+                <p>Com hora marcada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 Rodapé -->
+    <footer class="rodape">
+        <p class="assinatura">Érika Silva</p>
+        <p class="sub-rodape">BELEZA & PROGRESSIVA</p>
+        <a href="https://wa.me/5549996601984" target="_blank" class="btn-agendar-rodape">
+            AGENDAR PELO WHATSAPP
+        </a>
+        <p class="texto-final">Atendimento personalizado para deixar seus cabelos mais lisos, alinhados, saudáveis e com brilho.</p>
+        <p class="copyright">© 2026 Érika Silva — Todos os direitos reservados</p>
+    </footer>
+
+    <!-- ⚡ JavaScript do Menu -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('closeBtn');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+        });
+
+        const closeSidebar = () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        };
+
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', closeSidebar);
+        });
+    </script>
+
+</body>
+</html>
