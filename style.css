@@ -1,37 +1,60 @@
-/* ======================================
-   💓 CORAÇÃO PULSANTE — VERSÃO GODO 💓
-   ====================================== */
-.icone-pulsante {
-    display: inline-flex;
+/* 🎬 Vídeo em Tela Cheia — Sem Moldura */
+.video-fundo {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff2e44;
-    font-size: 2.8rem;
-    animation: pulsarForte 0.9s ease-in-out infinite;
-    margin-left: 10px;
-    vertical-align: middle;
-    filter: drop-shadow(0 0 8px rgba(255, 46, 68, 0.6));
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
 }
 
-@keyframes pulsarForte {
-    0% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 8px rgba(255, 46, 68, 0.6));
-    }
-    25% {
-        transform: scale(1.15);
-        filter: drop-shadow(0 0 12px rgba(255, 46, 68, 0.8));
-    }
-    50% {
-        transform: scale(1.3);
-        filter: drop-shadow(0 0 20px rgba(255, 46, 68, 1));
-    }
-    75% {
-        transform: scale(1.15);
-        filter: drop-shadow(0 0 12px rgba(255, 46, 68, 0.8));
-    }
-    100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 8px rgba(255, 46, 68, 0.6));
-    }
+.video-fundo video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+}
+
+/* Camada escura suave para o texto aparecer bem */
+.video-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-overlay h2 {
+    font-size: 2.5rem;
+    color: #ffc0cb;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.video-overlay p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Remove qualquer margem ou separação */
+.video-fundo + * {
+    margin-top: 0;
 }
