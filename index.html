@@ -3,128 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Keity Beauty — Antes e Depois</title>
+    <title>Érika Silva — Beleza & Progressiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(180deg, #fff9ee, #f8efdc);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            color: #5c3a21;
-            font-size: 26px;
-            margin-bottom: 35px;
-            font-weight: 700;
-        }
-        #btnAntesDepois {
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #b8860b, #ffcc00);
-            color: #000;
+        /* 🎀 Estilo do Botão de Opções */
+        .btn-opcao {
+            background: linear-gradient(135deg, #ff4081, #e91e63);
+            color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 700;
+            padding: 14px 32px;
+            font-size: 17px;
+            font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 5px 18px rgba(184, 134, 11, 0.35);
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 340px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+            transition: transform 0.3s ease;
+            margin: 20px 0;
+        }
+        .btn-opcao:hover { transform: scale(1.05); }
+
+        /* 📋 Caixa de Opções */
+        .menu-opcoes {
+            display: none; 
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #1a1a1a;
+            border: 1px solid #ff4081;
+            width: 260px;
+        }
+        .menu-opcoes a {
+            color: white;
             display: block;
-            margin: 0 auto;
+            margin: 12px 0;
+            padding: 8px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            text-decoration: none;
         }
-        #btnAntesDepois:hover {
-            transform: scale(1.04);
-            box-shadow: 0 7px 22px rgba(184, 134, 11, 0.45);
+        .menu-opcoes a:hover { background-color: #ff4081; }
+        .menu-opcoes hr {
+            border: none;
+            border-top: 1px solid #ff4081;
+            margin: 10px 0;
         }
-        #secaoAntesDepois {
+        .menu-opcoes strong { color: #ff4081; }
+        .mostrar { display: block; }
+
+        /* 📋 Botão Ver Detalhes dos Serviços */
+        .btn-ver-detalhes {
+            background: transparent;
+            color: #ff4081;
+            border: 2px solid #ff4081;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+        }
+        .btn-ver-detalhes:hover {
+            background: #ff4081;
+            color: white;
+        }
+
+        /* 📄 Caixa de Detalhes dos Serviços */
+        .caixa-detalhes {
             display: none;
-            margin-top: 35px;
-            animation: aparecer 0.4s ease;
+            margin-top: 15px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #ff4081;
+            text-align: left;
+            animation: aparecer 0.3s ease;
         }
         @keyframes aparecer {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .antes-depois {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
+        .caixa-detalhes.mostrar { display: block; }
+        .caixa-detalhes h4 {
+            color: #ff4081;
+            margin: 18px 0 8px;
+            font-size: 16px;
         }
-        .img-box {
-            flex: 1;
-            min-width: 280px;
-            text-align: center;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        .caixa-detalhes p,
+        .caixa-detalhes li {
+            color: #eee;
+            font-size: 14px;
+            line-height: 1.7;
         }
-        .img-box span {
-            display: block;
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+        .caixa-detalhes ul {
+            padding-left: 20px;
+            margin: 8px 0;
         }
-        .antes {
-            color: #8b4513;
+        .caixa-detalhes hr {
+            border: none;
+            border-top: 1px solid #ff4081;
+            margin: 10px 0;
         }
-        .depois {
-            color: #26a179;
+        .btn-whatsapp-detalhes {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
         }
-        .img-box img {
-            width: 100%;
-            border-radius: 12px;
-            height: auto;
-            object-fit: cover;
+        .btn-fechar {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>✨ Transformação dos Fios ✨</h2>
-
-    <button id="btnAntesDepois">
-        Ver Antes e Depois 👁️
+    <!-- ☰ Botão Menu Lateral Original -->
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
     </button>
 
-    <div id="secaoAntesDepois">
-        <div class="antes-depois">
-            <div class="img-box">
-                <span class="antes">ANTES</span>
-                <img src="antes3.jpg" alt="Cabelo antes — ressecado e crespo">
+    <!-- 📋 Menu Lateral Original -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Érika Silva</h3>
+            <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#sobre"><i class="fas fa-user"></i> Sobre a Profissional</a>
+            <a href="#servicos"><i class="fas fa-spa"></i> Serviços</a>
+            <a href="#resultados"><i class="fas fa-images"></i> Resultados</a>
+            <a href="https://wa.me/5549996601984" target="_blank"><i class="fab fa-whatsapp"></i> Agendar Horário</a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 Érika Silva</p>
+        </div>
+    </aside>
+
+    <!-- 🔝 Cabeçalho / Hero -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="nome-principal">Érika Silva</h1>
+                <p class="subtitulo">BELEZA & PROGRESSIVA</p>
+                <p class="descricao">
+                    Realce sua beleza com seus cabelos,<br>
+                    mais lisos, saudáveis e cheios de brilho.<br>
+                    Atendimento personalizado para realçar<br>
+                    a sua melhor versão!
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> AGENDAR PELO WHATSAPP
+                    </a>
+                    <a href="https://instagram.com/erika_silveer" target="_blank" class="btn-instagram">
+                        <i class="fab fa-instagram"></i> @erika_silveer
+                    </a>
+                </div>
+
+                <!-- ✨ Botão de Abrir Opções -->
+                <button class="btn-opcao" onclick="alternarMenu()">☰ ABRIR MAIS OPÇÕES</button>
+                <div id="meuMenu" class="menu-opcoes">
+                    <strong>Escolha uma opção:</strong>
+                    <hr>
+                    <a href="https://wa.me/5549996601984" target="_blank">💬 WhatsApp</a>
+                    <a href="https://instagram.com/erika_silveer" target="_blank">📸 Instagram</a>
+                    <a href="#servicos">💇‍♀️ Nossos Serviços</a>
+                    <a href="#resultados">📸 Resultados</a>
+                </div>
             </div>
-            <div class="img-box">
-                <span class="depois">DEPOIS</span>
-                <img src="depois3.jpg" alt="Cabelo depois — liso e brilhante">
+            <div class="hero-image">
+                <video 
+                    src="video-apresentacao.mp4" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    style="width: 100%; height: auto; display: block; border-radius: inherit;"
+                >
+                    Seu navegador não suporta vídeos.
+                </video>
             </div>
         </div>
-    </div>
-</div>
+        <div class="wave-divider"></div>
+    </header>
 
-<script>
-const botao = document.getElementById('btnAntesDepois');
-const secao = document.getElementById('secaoAntesDepois');
-let aberto = false;
+    <!-- 👩 Sobre a Profissional -->
+    <section class="sobre" id="sobre">
+        <h2 class="titulo-secao">Sobre <span>Érika Silva</span></h2>
+        <div class="sobre-content">
+            <p>Sou Érika Silva, profissional especializada em progressiva e alisamento capilar. Com 9 anos de experiência, trago técnicas avançadas e produtos de alta qualidade para transformar seus cabelos. Meu trabalho é feito com dedicação, cuidado e atenção aos detalhes, garantindo resultados que realçam sua beleza natural. Venha conhecer meu espaço e se sentir ainda mais linda!</p>
+        </div>
+    </section>
 
-botao.addEventListener('click', () => {
-    aberto = !aberto;
-    secao.style.display = aberto ? 'block' : 'none';
-    botao.textContent = aberto ? 'Fechar ❌' : 'Ver Antes e Depois 👁️';
-});
-</script>
+    <!-- ✨ Nossos Serviços -->
+    <section class="servicos" id="servicos">
+        <h2 class="titulo-secao">Nossos <span>SERVIÇOS</span></h2>
+        <div class="servicos-grid">
+            
+            <!-- 💇‍♀️ PROGRESSIVA -->
+            <div class="servico-card">
+                <div class="icone"><i class="fas fa-cut"></i></div>
+                <h3>PROGRESSIVA</h3>
+                <p class="resumo-servico">Cabelos mais lisos, alinhados e sem frizz.</p>
+                
+                <button class="btn-ver-detalhes" onclick="alternarDetalhes('detalhes-progressiva')">
+                    📋 Ver Detalhes Completos
+                </button>
+                <div id="detalhes-progressiva" class="caixa-detalhes">
+                    <hr>
+                    <h4>✨ O que é a Progressiva?</h4>
+                    <p>A progressiva é um tratamento de alisamento e redução de volume que atua na estrutura dos fios, promovendo cabelos lisos, disciplinados e com muito brilho, sem perder a naturalidade. Diferente de processos antigos, as técnicas atuais preservam a saúde capilar enquanto entregam resultados incríveis.</p>
+
+                    <h4>💎 Benefícios do Tratamento</h4>
+                    <ul>
+                        <li>✅ Elimina totalmente o frizz e o volume excessivo</li>
+                        <li>✅ Reduz drasticamente o tempo de secagem e chapinha</li>
+                        <li>✅ Fios mais lisos, alinhados e macios ao toque</li>
+                        <li>✅ Brilho intenso e aspecto saudável</li>
+                        <li>✅ Resultado duradouro por meses</li>
+                        <li>✅ Menos embaraço e facilidade no dia a dia</li>
+                    </ul>
+
+                    <h4>🔬 Como é feito?</h4>
+                    <p>Utilizo produtos de alta qualidade, selecionados conforme o tipo e a necessidade dos seus fios. O processo inclui: avaliação personalizada, aplicação técnica, tempo de pausa, finalização e orientações completas de manutenção. Cada etapa é realizada com cuidado para garantir segurança e resultados perfeitos.</p>
+
+                    <h4>⏱️ Duração e Manutenção</h4>
+                    <p>O efeito progressivo se mantém por aproximadamente 3 a 5 meses, dependendo do tipo de cabelo e dos cuidados em casa. Recomendo sempre usar produtos sem sal e com proteção térmica para prolongar ainda mais o resultado.</p>
+
+                    <h4>💬 Quer saber mais ou agendar?</h4>
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp-detalhes">💬 Falar no WhatsApp</a>
+                    <br>
+                    <button class="btn-fechar" onclick="alternarDetalhes('detalhes-progressiva')">✖ Fechar</button>
+                </div>
+            </div>
+
+            <!-- 💧 HIDRATAÇÃO -->
+            <div class="servico-card">
+                <div class="icone"><i class="fas fa-tint"></i></div>
+                <h3>HIDRATAÇÃO</h3>
+                <p class="resumo-servico">Hidratação profunda para fios saudáveis e macios.</p>
+                
+                <button class="btn-ver-detalhes" onclick="alternarDetalhes('detalhes-hidratacao')">
+                    📋 Ver Detalhes Completos
+                </button>
+                <div id="detalhes-hidratacao" class="caixa-detalhes">
+                    <hr>
+                    <h4>💧 O que é a Hidratação?</h4>
+                    <p>A hidratação devolve a água e os nutrientes essenciais que os fios perdem com o tempo, com o uso de produtos químicos, calor e fatores ambientais. É o cuidado fundamental para manter cabelos macios, brilhantes e resistentes.</p>
+
+                    <h4>💎 Benefícios</h4>
+                    <ul>
+                        <li>✅ Repõe a hidratação profunda dos fios</li>
+                        <li>✅ Reduz pontas duplas e ressecamento</li>
+                        <li>✅ Cabelos mais macios, sedosos e brilhantes</li>
+                        <li>✅ Melhora a maleabilidade e facilita o pentear</li>
+                        <li>✅ Protege contra ressecamento futuro</li>
+                    </ul>
+
+                    <h4>🔬 Como é feito?</h4>
+                    <p>Após a lavagem, aplico máscaras de tratamento profundo, adequadas ao seu tipo de cabelo e sua necessidade específica. O produto age por um tempo determinado, penetrando na cutícula dos fios, e depois é enxaguado com cuidado, finalizando com técnicas que potencializam o resultado.</p>
+
+                    <h4>⏱️ Frequência Recomendada</h4>
+                    <p>Para cabelos saudáveis: a cada 15 dias. Para cabelos ressecados ou com química: semanal ou a cada 7 dias, conforme orientação personalizada.</p>
+
+                    <h4>💬 Agende sua hidratação</h4>
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp-detalhes">💬 Falar no WhatsApp</a>
+                    <br>
+                    <button class="btn-fechar" onclick="alternarDetalhes('detalhes-hidratacao')">✖ Fechar</button>
+                </div>
+            </div>
+
+            <!-- 💨 ESCOVA -->
+            <div class="servico-card">
+                <div class="icone"><i class="fas fa-wind"></i></div>
+                <h3>ESCOVA</h3>
+                <p class="resumo-servico">Mais brilho, leveza e movimento para seus cabelos.</p>
+                
+                <button class="btn-ver-detalhes" onclick="alternarDetalhes('detalhes-escova')">
+                    📋 Ver Detalhes Completos
+                </button>
+                <div id="detalhes-escova" class="caixa-detalhes">
+                    <hr>
+                    <h4>💨 O que é a Escova?</h4>
+                    <p>A escova profissional é uma técnica de secagem e modelagem que alinha os fios, reduz volume e deixa os cabelos com aspecto impecável, sem precisar de alisamento permanente. Versátil, pode ser feita em diferentes estilos: lisa, com movimento, mais natural ou mais estruturada.</p>
+
+                    <h4>💎 Benefícios</h4>
+                    <ul>
+                        <li>✅ Fios alinhados, brilhantes e sem volume excessivo</li>
+                        <li>✅ Resultado imediato e visual renovado</li>
+                        <li>✅ Proteção térmica aplicada antes do calor</li>
+                        <li>✅ Modelagem personalizada do seu jeito</li>
+                        <li>✅ Duração de 3 a 5 dias com os cuidados certos</li>
+                    </ul>
+
+                    <h4>🔬 Como é feita?</h4>
+                    <p>Começa com lavagem adequada e aplicação de protetor térmico. Em seguida, os fios são secos e modelados com secador e escova, trabalhando mecha por mecha com precisão. O resultado é finalizado com produtos de acabamento que garantem brilho e durabilidade.</p>
+
+                    <h4>💬 Agende sua escova</h4>
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp-detalhes">💬 Falar no WhatsApp</a>
+                    <br>
+                    <button class="btn-fechar" onclick="alternarDetalhes('detalhes-escova')">✖ Fechar</button>
+                </div>
+            </div>
+
+            <!-- 🧪 TRATAMENTOS -->
+            <div class="servico-card">
+                <div class="icone"><i class="fas fa-flask"></i></div>
+                <h3>TRATAMENTOS</h3>
+                <p class="resumo-servico">Reconstrução e nutrição para fios fortes e bonitos.</p>
+                
+                <button class="btn-ver-detalhes" onclick="alternarDetalhes('detalhes-tratamentos')">
+                    📋 Ver Detalhes Completos
+                </button>
+                <div id="detalhes-tratamentos" class="caixa-detalhes">
+                    <hr>
+                    <h4>🧪 O que são os Tratamentos?</h4>
+                    <p>São procedimentos especializados que visam devolver a saúde dos fios que sofreram danos, químicas, quebra ou enfraquecimento. Diferente da hidratação básica, os tratamentos agem na estrutura interna do cabelo, reconstruindo e fortalecendo de dentro para fora.</p>
+
+                    <h4>💎 Tipos de Tratamento</h4>
+                    <ul>
+                        <li><strong>🔬 Reconstrução:</strong> Repõe a queratina e fortalece a estrutura dos fios danificados</li>
+                        <li><strong>🌿 Nutrição:</strong> Repõe os óleos naturais, ideal para cabelos opacos e sem vida</li>
+                        <li><strong>💧 Reposição de Massa:</strong> Para fios finos, quebradiços ou com química</li>
+                        <li><strong>✨ Blends Personalizados:</strong> Combinações de tratamentos para necessidades específicas</li>
+                    </ul>
+
+                    <h4>🔬 Como funciona?</h4>
+                    <p>Primeiro faço uma avaliação completa do seu cabelo para identificar exatamente o que ele precisa. Depois, aplico o tratamento mais adequado, com produtos profissionais de alta performance, seguindo todo o processo técnico para garantir que os ativos penetrem e ajam de forma eficaz.</p>
+
+                    <h4>💬 Faça uma avaliação</h4>
+                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp-detalhes">💬 Falar no WhatsApp</a>
+                    <br>
+                    <button class="btn-fechar" onclick="alternarDetalhes('detalhes-tratamentos')">✖ Fechar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📸 Resultados Antes e Depois -->
+    <section class="resultados" id="resultados">
+        <h2 class="titulo-secao">RESULTADOS <span>QUE FALAM</span></h2>
+        <div class="resultados-grid">
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box"><span>ANTES</span><img src="antes1.jpg" alt="Antes"></div>
+                    <div class="img-box"><span>DEPOIS</span><img src="depois1.jpg" alt="Depois"></div>
+                </div>
+            </div>
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box"><span>ANTES</span><img src="antes2.jpg" alt="Antes"></div>
+                    <div class="img-box"><span>DEPOIS</span><img src="depois2.jpg" alt="Depois"></div>
+                </div>
+            </div>
+            <div class="resultado-card">
+                <div class="antes-depois">
+                    <div class="img-box"><span>ANTES</span><img src="antes3.jpg" alt="Antes"></div>
+                    <div class="img-box"><span>DEPOIS</span><img src="depois3.jpg" alt="Depois"></div>
+                </div>
+            </div>
+        </div>
+        <p class="frase-final">Sua melhor versão começa aqui! ❤</p>
+    </section>
+
+    <!-- 💎 Diferenciais -->
+    <section class="diferenciais">
+        <div class="diferencial-item">
+            <i class="fas fa-gem"></i>
+            <span>Produtos de alta qualidade</span>
+            <p>Para seus cabelos com excelência</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-star"></i>
+            <span>Atendimento personalizado</span>
+            <p>Cada detalhe feito com carinho</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Resultados comprovados</span>
+            <p>Clientes satisfeitas e realizadas</p>
+        </div>
+        <div class="diferencial-item">
+            <i class="fas fa-heart"></i>
+            <span>Cuidado & carinho</span>
+            <p>Tratamentos com amor</p>
+        </div>
+    </section>
+
+    <!-- 📞 Contato -->
+    <section class="contato">
+        <div class="contato-grid">
+            <a href="https://wa.me/5549996601984" target="_blank" class="contato-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WHATSAPP</span>
+                <p>(49) 99660-1984</p>
+            </a>
+            <a href="https://instagram.com/erika_silveer" target="_blank" class="contato-item">
+                <i class="fab fa-instagram"></i>
+                <span>INSTAGRAM</span>
+                <p>@erika_silveer</p>
+            </a>
+            <div class="contato-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>ATENDIMENTO</span>
+                <p>Com hora marcada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 Rodapé -->
+    <footer class="rodape">
+        <p class="assinatura">Érika Silva</p>
+        <p class="sub-rodape">BELEZA & PROGRESSIVA</p>
+        <a href="https://wa.me/5549996601984" target="_blank" class="btn-agendar-rodape">AGENDAR PELO WHATSAPP</a>
+        <p class="texto-final">Atendimento personalizado para deixar seus cabelos mais lisos, alinhados, saudáveis e com brilho.</p>
+        <p class="copyright">© 2026 Érika Silva — Todos os direitos reservados</p>
+    </footer>
+
+    <!-- ⚡ JavaScript -->
+    <script>
+        // Menu Lateral
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('closeBtn');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+        });
+
+        const closeSidebar = () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        };
+
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', closeSidebar);
+        });
+
+        // Botão de Opções
+        function alternarMenu() {
+            var menu = document.getElementById("meuMenu");
+            menu.classList.toggle("mostrar");
+        }
+
+        // Botão Ver Detalhes dos Serviços
+        function alternarDetalhes(id) {
+            var caixa = document.getElementById(id);
+            caixa.classList.toggle("mostrar");
+        }
+    </script>
 
 </body>
 </html>
