@@ -3,249 +3,748 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Érika Silva — Beleza & Progressiva</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- ☰ Botão Menu Lateral -->
-    <button class="menu-toggle" id="menuToggle">
+    <!-- ☰ BOTÃO MENU LATERAL -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
         <i class="fas fa-bars"></i>
     </button>
 
-    <!-- 📋 Menu Lateral -->
+
+    <!-- 🌑 FUNDO DO MENU -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- 📋 MENU LATERAL -->
     <aside class="sidebar" id="sidebar">
+
         <div class="sidebar-header">
             <h3>Érika Silva</h3>
-            <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+
+            <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
+
+
         <nav class="sidebar-nav">
-            <a href="#sobre"><i class="fas fa-user"></i> Sobre a Profissional</a>
-            <a href="#servicos"><i class="fas fa-spa"></i> Serviços</a>
-            <a href="#resultados"><i class="fas fa-images"></i> Resultados</a>
-            <a href="https://wa.me/5549996601984" target="_blank"><i class="fab fa-whatsapp"></i> Agendar Horário</a>
+
+            <a href="#sobre">
+                <i class="fas fa-user"></i>
+                <span>Sobre a Profissional</span>
+            </a>
+
+            <a href="#trabalhos">
+                <i class="fas fa-magic"></i>
+                <span>Sobre os Trabalhos</span>
+            </a>
+
+            <a href="#servicos">
+                <i class="fas fa-spa"></i>
+                <span>Serviços</span>
+            </a>
+
+            <a href="#resultados">
+                <i class="fas fa-images"></i>
+                <span>Resultados</span>
+            </a>
+
+            <a href="https://wa.me/5549996601984" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Agendar Horário</span>
+            </a>
+
         </nav>
+
+
         <div class="sidebar-footer">
             <p>© 2026 Érika Silva</p>
         </div>
+
     </aside>
 
-    <!-- 🔝 Cabeçalho / Hero -->
+
+    <!-- ✨ HERO / CABEÇALHO -->
     <header class="hero" id="inicio">
+
         <div class="hero-content">
+
             <div class="hero-text">
-                <h1 class="nome-principal">Érika Silva</h1>
-                <p class="subtitulo">BELEZA & PROGRESSIVA</p>
+
+                <h1 class="nome-principal">
+                    Érika Silva
+                </h1>
+
+                <p class="subtitulo">
+                    BELEZA & PROGRESSIVA
+                </p>
+
                 <p class="descricao">
                     Realce sua beleza com seus cabelos,<br>
                     mais lisos, saudáveis e cheios de brilho.<br>
                     Atendimento personalizado para realçar<br>
                     a sua melhor versão!
                 </p>
-                
+
+
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5549996601984" target="_blank" class="btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> AGENDAR PELO WHATSAPP
+
+                    <a href="https://wa.me/5549996601984"
+                       target="_blank"
+                       class="btn-whatsapp">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        AGENDAR PELO WHATSAPP
+
                     </a>
-                    
-                    <a href="https://instagram.com/erika_silveer" target="_blank" class="btn-instagram">
-                        <i class="fab fa-instagram"></i> @erika_silveer
+
+
+                    <a href="https://instagram.com/erika_silveer"
+                       target="_blank"
+                       class="btn-instagram">
+
+                        <i class="fab fa-instagram"></i>
+
+                        @erika_silveer
+
                     </a>
+
                 </div>
+
             </div>
+
+
+            <!-- 🎥 VÍDEO DE APRESENTAÇÃO -->
             <div class="hero-image">
-                <video 
-                    src="video-apresentacao.mp4" 
-                    autoplay 
-                    muted 
-                    loop 
+
+                <video
+                    src="video-apresentacao.mp4"
+                    autoplay
+                    muted
+                    loop
                     playsinline
                     style="width: 100%; height: auto; display: block; border-radius: inherit;"
                 >
                     Seu navegador não suporta vídeos.
                 </video>
+
             </div>
+
         </div>
+
+
         <div class="wave-divider"></div>
+
     </header>
 
-    <!-- 👩 Sobre a Profissional -->
+
+    <!-- 👩 SOBRE A PROFISSIONAL -->
     <section class="sobre" id="sobre">
-        <h2 class="titulo-secao">Sobre <span>Érika Silva</span></h2>
+
+        <h2 class="titulo-secao">
+            Sobre <span>Érika Silva</span>
+        </h2>
+
+
         <div class="sobre-content">
-            <p>Sou Érika Silva, profissional especializada em progressiva e alisamento capilar. Com 9 anos de experiência, trago técnicas avançadas e produtos de alta qualidade para transformar seus cabelos. Meu trabalho é feito com dedicação, cuidado e atenção aos detalhes, garantindo resultados que realçam sua beleza natural. Venha conhecer meu espaço e se sentir ainda mais linda!</p>
+
+            <p>
+                Sou Érika Silva, profissional especializada em progressiva
+                e alisamento capilar. Com 9 anos de experiência, trago
+                técnicas avançadas e produtos de alta qualidade para
+                transformar seus cabelos.
+            </p>
+
+            <p>
+                Meu trabalho é feito com dedicação, cuidado e atenção
+                aos detalhes, garantindo resultados que realçam sua
+                beleza natural.
+            </p>
+
+            <p>
+                Venha conhecer meu espaço e se sentir ainda mais linda!
+            </p>
+
         </div>
+
     </section>
 
-    <!-- ✨ Nossos Serviços -->
+
+    <!-- 💖 SOBRE OS TRABALHOS -->
+    <section class="sobre-trabalhos" id="trabalhos">
+
+        <h2 class="titulo-secao">
+            Sobre os <span>Trabalhos</span>
+        </h2>
+
+
+        <div class="trabalhos-content">
+
+            <div class="trabalho-texto">
+
+                <h3>
+                    Beleza, cuidado e transformação
+                </h3>
+
+                <p>
+                    Cada trabalho é realizado de forma personalizada,
+                    levando em consideração o tipo, a estrutura e as
+                    necessidades de cada cabelo.
+                </p>
+
+                <p>
+                    O objetivo é proporcionar cabelos mais alinhados,
+                    lisos, saudáveis, macios e com brilho, sempre buscando
+                    um resultado bonito e natural.
+                </p>
+
+                <p>
+                    A progressiva e os demais tratamentos são realizados
+                    com atenção aos detalhes, desde a avaliação dos fios
+                    até a finalização.
+                </p>
+
+                <p>
+                    Além da transformação, o cuidado com a saúde dos
+                    cabelos faz parte de cada atendimento.
+                </p>
+
+            </div>
+
+
+            <div class="trabalhos-lista">
+
+
+                <!-- PROGRESSIVA -->
+                <div class="trabalho-item">
+
+                    <i class="fas fa-magic"></i>
+
+                    <div>
+
+                        <h4>
+                            Progressiva e alisamento
+                        </h4>
+
+                        <p>
+                            Técnicas para alinhar os fios, reduzir o frizz
+                            e proporcionar um efeito liso e bem cuidado.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUIDADOS -->
+                <div class="trabalho-item">
+
+                    <i class="fas fa-heart"></i>
+
+                    <div>
+
+                        <h4>
+                            Cuidados personalizados
+                        </h4>
+
+                        <p>
+                            Atendimento pensado de acordo com as
+                            características e necessidades de cada cabelo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FINALIZAÇÃO -->
+                <div class="trabalho-item">
+
+                    <i class="fas fa-sparkles"></i>
+
+                    <div>
+
+                        <h4>
+                            Finalização e brilho
+                        </h4>
+
+                        <p>
+                            Finalização cuidadosa para valorizar o
+                            movimento, a maciez e o brilho dos fios.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRATAMENTO -->
+                <div class="trabalho-item">
+
+                    <i class="fas fa-leaf"></i>
+
+                    <div>
+
+                        <h4>
+                            Tratamento dos fios
+                        </h4>
+
+                        <p>
+                            Hidratação, nutrição e reconstrução para
+                            complementar os cuidados e manter os cabelos
+                            bonitos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ✨ NOSSOS SERVIÇOS -->
     <section class="servicos" id="servicos">
-        <h2 class="titulo-secao">Nossos <span>SERVIÇOS</span></h2>
+
+        <h2 class="titulo-secao">
+            Nossos <span>SERVIÇOS</span>
+        </h2>
+
+
         <div class="servicos-grid">
-            
+
+
+            <!-- PROGRESSIVA -->
             <div class="servico-card">
+
                 <div class="icone">
                     <i class="fas fa-cut"></i>
                 </div>
-                <h3>PROGRESSIVA</h3>
-                <p>Cabelos mais lisos, alinhados e sem frizz.</p>
+
+                <h3>
+                    PROGRESSIVA
+                </h3>
+
+                <p>
+                    Cabelos mais lisos, alinhados e sem frizz.
+                </p>
+
             </div>
 
+
+            <!-- HIDRATAÇÃO -->
             <div class="servico-card">
+
                 <div class="icone">
                     <i class="fas fa-tint"></i>
                 </div>
-                <h3>HIDRATAÇÃO</h3>
-                <p>Hidratação profunda para fios saudáveis e macios.</p>
+
+                <h3>
+                    HIDRATAÇÃO
+                </h3>
+
+                <p>
+                    Hidratação profunda para fios saudáveis e macios.
+                </p>
+
             </div>
 
+
+            <!-- ESCOVA -->
             <div class="servico-card">
+
                 <div class="icone">
                     <i class="fas fa-wind"></i>
                 </div>
-                <h3>ESCOVA</h3>
-                <p>Mais brilho, leveza e movimento para seus cabelos.</p>
+
+                <h3>
+                    ESCOVA
+                </h3>
+
+                <p>
+                    Mais brilho, leveza e movimento para seus cabelos.
+                </p>
+
             </div>
 
+
+            <!-- TRATAMENTOS -->
             <div class="servico-card">
+
                 <div class="icone">
                     <i class="fas fa-flask"></i>
                 </div>
-                <h3>TRATAMENTOS</h3>
-                <p>Reconstrução e nutrição para fios fortes e bonitos.</p>
+
+                <h3>
+                    TRATAMENTOS
+                </h3>
+
+                <p>
+                    Reconstrução e nutrição para fios fortes e bonitos.
+                </p>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- 📸 Resultados Antes e Depois -->
+
+    <!-- 📸 RESULTADOS ANTES E DEPOIS -->
     <section class="resultados" id="resultados">
-        <h2 class="titulo-secao">RESULTADOS <span>QUE FALAM</span></h2>
+
+        <h2 class="titulo-secao">
+            RESULTADOS <span>QUE FALAM</span>
+        </h2>
+
+
         <div class="resultados-grid">
-            
+
+
+            <!-- RESULTADO 1 -->
             <div class="resultado-card">
+
                 <div class="antes-depois">
+
                     <div class="img-box">
+
                         <span>ANTES</span>
-                        <img src="antes1.jpg" alt="Antes">
+
+                        <img
+                            src="antes1.jpg"
+                            alt="Resultado antes do tratamento"
+                        >
+
                     </div>
+
+
                     <div class="img-box">
+
                         <span>DEPOIS</span>
-                        <img src="depois1.jpg" alt="Depois">
+
+                        <img
+                            src="depois1.jpg"
+                            alt="Resultado depois do tratamento"
+                        >
+
                     </div>
+
                 </div>
+
             </div>
 
+
+            <!-- RESULTADO 2 -->
             <div class="resultado-card">
+
                 <div class="antes-depois">
+
                     <div class="img-box">
+
                         <span>ANTES</span>
-                        <img src="antes2.jpg" alt="Antes">
+
+                        <img
+                            src="antes2.jpg"
+                            alt="Resultado antes do tratamento"
+                        >
+
                     </div>
+
+
                     <div class="img-box">
+
                         <span>DEPOIS</span>
-                        <img src="depois2.jpg" alt="Depois">
+
+                        <img
+                            src="depois2.jpg"
+                            alt="Resultado depois do tratamento"
+                        >
+
                     </div>
+
                 </div>
+
             </div>
 
+
+            <!-- RESULTADO 3 -->
             <div class="resultado-card">
+
                 <div class="antes-depois">
+
                     <div class="img-box">
+
                         <span>ANTES</span>
-                        <img src="antes3.jpg" alt="Antes">
+
+                        <img
+                            src="antes3.jpg"
+                            alt="Resultado antes do tratamento"
+                        >
+
                     </div>
+
+
                     <div class="img-box">
+
                         <span>DEPOIS</span>
-                        <img src="depois3.jpg" alt="Depois">
+
+                        <img
+                            src="depois3.jpg"
+                            alt="Resultado depois do tratamento"
+                        >
+
                     </div>
+
                 </div>
+
             </div>
 
         </div>
-        <p class="frase-final">Sua melhor versão começa aqui! ❤</p>
+
+
+        <p class="frase-final">
+            Sua melhor versão começa aqui! ❤
+        </p>
+
     </section>
 
-    <!-- 💎 Diferenciais -->
+
+    <!-- 💎 DIFERENCIAIS -->
     <section class="diferenciais">
+
+
         <div class="diferencial-item">
+
             <i class="fas fa-gem"></i>
-            <span>Produtos de alta qualidade</span>
-            <p>Para seus cabelos com excelência</p>
+
+            <span>
+                Produtos de alta qualidade
+            </span>
+
+            <p>
+                Para seus cabelos com excelência
+            </p>
+
         </div>
+
+
         <div class="diferencial-item">
+
             <i class="fas fa-star"></i>
-            <span>Atendimento personalizado</span>
-            <p>Cada detalhe feito com carinho</p>
+
+            <span>
+                Atendimento personalizado
+            </span>
+
+            <p>
+                Cada detalhe feito com carinho
+            </p>
+
         </div>
+
+
         <div class="diferencial-item">
+
             <i class="fas fa-shield-alt"></i>
-            <span>Resultados comprovados</span>
-            <p>Clientes satisfeitas e realizadas</p>
+
+            <span>
+                Resultados comprovados
+            </span>
+
+            <p>
+                Clientes satisfeitas e realizadas
+            </p>
+
         </div>
+
+
         <div class="diferencial-item">
+
             <i class="fas fa-heart"></i>
-            <span>Cuidado & carinho</span>
-            <p>Tratamentos com amor</p>
+
+            <span>
+                Cuidado & carinho
+            </span>
+
+            <p>
+                Tratamentos com amor
+            </p>
+
         </div>
+
     </section>
 
-    <!-- 📞 Contato -->
+
+    <!-- 📞 CONTATO -->
     <section class="contato">
+
         <div class="contato-grid">
-            <a href="https://wa.me/5549996601984" target="_blank" class="contato-item">
+
+
+            <!-- WHATSAPP -->
+            <a
+                href="https://wa.me/5549996601984"
+                target="_blank"
+                class="contato-item"
+            >
+
                 <i class="fab fa-whatsapp"></i>
-                <span>WHATSAPP</span>
-                <p>(49) 99660-1984</p>
+
+                <span>
+                    WHATSAPP
+                </span>
+
+                <p>
+                    (49) 99660-1984
+                </p>
+
             </a>
-            <a href="https://instagram.com/erika_silveer" target="_blank" class="contato-item">
+
+
+            <!-- INSTAGRAM -->
+            <a
+                href="https://instagram.com/erika_silveer"
+                target="_blank"
+                class="contato-item"
+            >
+
                 <i class="fab fa-instagram"></i>
-                <span>INSTAGRAM</span>
-                <p>@erika_silveer</p>
+
+                <span>
+                    INSTAGRAM
+                </span>
+
+                <p>
+                    @erika_silveer
+                </p>
+
             </a>
+
+
+            <!-- ATENDIMENTO -->
             <div class="contato-item">
+
                 <i class="fas fa-map-marker-alt"></i>
-                <span>ATENDIMENTO</span>
-                <p>Com hora marcada</p>
+
+                <span>
+                    ATENDIMENTO
+                </span>
+
+                <p>
+                    Com hora marcada
+                </p>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- 📌 Rodapé -->
+
+    <!-- 📌 RODAPÉ -->
     <footer class="rodape">
-        <p class="assinatura">Érika Silva</p>
-        <p class="sub-rodape">BELEZA & PROGRESSIVA</p>
-        <a href="https://wa.me/5549996601984" target="_blank" class="btn-agendar-rodape">
+
+        <p class="assinatura">
+            Érika Silva
+        </p>
+
+        <p class="sub-rodape">
+            BELEZA & PROGRESSIVA
+        </p>
+
+
+        <a
+            href="https://wa.me/5549996601984"
+            target="_blank"
+            class="btn-agendar-rodape"
+        >
             AGENDAR PELO WHATSAPP
         </a>
-        <p class="texto-final">Atendimento personalizado para deixar seus cabelos mais lisos, alinhados, saudáveis e com brilho.</p>
-        <p class="copyright">© 2026 Érika Silva — Todos os direitos reservados</p>
+
+
+        <p class="texto-final">
+            Atendimento personalizado para deixar seus cabelos mais
+            lisos, alinhados, saudáveis e com brilho.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Érika Silva — Todos os direitos reservados
+        </p>
+
     </footer>
 
-    <!-- ⚡ JavaScript do Menu -->
+
+    <!-- ⚡ JAVASCRIPT DO MENU -->
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const sidebar = document.getElementById('sidebar');
-        const closeBtn = document.getElementById('closeBtn');
-        const overlay = document.getElementById('sidebarOverlay');
+
+        const menuToggle =
+            document.getElementById('menuToggle');
+
+        const sidebar =
+            document.getElementById('sidebar');
+
+        const closeBtn =
+            document.getElementById('closeBtn');
+
+        const overlay =
+            document.getElementById('sidebarOverlay');
+
 
         menuToggle.addEventListener('click', () => {
+
             sidebar.classList.add('open');
+
             overlay.classList.add('active');
+
         });
+
 
         const closeSidebar = () => {
+
             sidebar.classList.remove('open');
+
             overlay.classList.remove('active');
+
         };
 
-        closeBtn.addEventListener('click', closeSidebar);
-        overlay.addEventListener('click', closeSidebar);
 
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', closeSidebar);
-        });
+        closeBtn.addEventListener(
+            'click',
+            closeSidebar
+        );
+
+
+        overlay.addEventListener(
+            'click',
+            closeSidebar
+        );
+
+
+        document
+            .querySelectorAll('.sidebar-nav a')
+            .forEach(link => {
+
+                link.addEventListener(
+                    'click',
+                    closeSidebar
+                );
+
+            });
+
     </script>
 
 </body>
