@@ -56,7 +56,17 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="img/hero-modelo.jpg" alt="Érika Silva — Beleza & Progressiva">
+                <!-- ✅ NOME CORRIGIDO -->
+                <video 
+                    src="video-apresentacao.mp4" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    style="width: 100%; height: auto; display: block; border-radius: inherit;"
+                >
+                    Seu navegador não suporta vídeos.
+                </video>
             </div>
         </div>
         <div class="wave-divider"></div>
@@ -66,7 +76,7 @@
     <section class="sobre" id="sobre">
         <h2 class="titulo-secao">Sobre <span>Érika Silva</span></h2>
         <div class="sobre-content">
-            <p>Sou Érika Silva, profissional especializada em progressiva e alisamento capilar. Com anos de experiência, trago técnicas avançadas e produtos de alta qualidade para transformar seus cabelos. Meu trabalho é feito com dedicação, cuidado e atenção aos detalhes, garantindo resultados que realçam sua beleza natural. Venha conhecer meu espaço e se sentir ainda mais linda!</p>
+            <p>Sou Érika Silva, profissional especializada em progressiva e alisamento capilar. Com 9 anos de experiência, trago técnicas avançadas e produtos de alta qualidade para transformar seus cabelos. Meu trabalho é feito com dedicação, cuidado e atenção aos detalhes, garantindo resultados que realçam sua beleza natural. Venha conhecer meu espaço e se sentir ainda mais linda!</p>
         </div>
     </section>
 
@@ -119,11 +129,11 @@
                 <div class="antes-depois">
                     <div class="img-box">
                         <span>ANTES</span>
-                        <img src="img/antes1.jpg" alt="Antes">
+                        <img src="antes1.jpg" alt="Antes">
                     </div>
                     <div class="img-box">
                         <span>DEPOIS</span>
-                        <img src="img/depois1.jpg" alt="Depois">
+                        <img src="depois1.jpg" alt="Depois">
                     </div>
                 </div>
             </div>
@@ -132,11 +142,11 @@
                 <div class="antes-depois">
                     <div class="img-box">
                         <span>ANTES</span>
-                        <img src="img/antes2.jpg" alt="Antes">
+                        <img src="antes2.jpg" alt="Antes">
                     </div>
                     <div class="img-box">
                         <span>DEPOIS</span>
-                        <img src="img/depois2.jpg" alt="Depois">
+                        <img src="depois2.jpg" alt="Depois">
                     </div>
                 </div>
             </div>
@@ -145,11 +155,11 @@
                 <div class="antes-depois">
                     <div class="img-box">
                         <span>ANTES</span>
-                        <img src="img/antes3.jpg" alt="Antes">
+                        <img src="antes3.jpg" alt="Antes">
                     </div>
                     <div class="img-box">
                         <span>DEPOIS</span>
-                        <img src="img/depois3.jpg" alt="Depois">
+                        <img src="depois3.jpg" alt="Depois">
                     </div>
                 </div>
             </div>
@@ -234,7 +244,6 @@
         closeBtn.addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
 
-        // Fechar menu ao clicar em um link
         document.querySelectorAll('.sidebar-nav a').forEach(link => {
             link.addEventListener('click', closeSidebar);
         });
